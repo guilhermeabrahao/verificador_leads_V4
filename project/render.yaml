@@ -2,8 +2,9 @@ services:
   - type: web
     name: lead-verifier-backend
     env: python
-    buildCommand: "cd project && pip install -r requirements.txt && playwright install --with-deps"
-    startCommand: "cd project && python app.py"
+    rootDir: project
+    buildCommand: "pip install -r requirements.txt && playwright install --with-deps"
+    startCommand: "python app.py"
     envVars:
       - key: OPENAI_API_KEY
         sync: false
