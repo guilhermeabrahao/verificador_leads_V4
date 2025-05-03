@@ -1,5 +1,0 @@
-services:
-  - type: web
-    name: lead-verifier-backend
-    env: docker
-    plan: free
