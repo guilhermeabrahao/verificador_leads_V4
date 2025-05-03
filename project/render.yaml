@@ -2,7 +2,7 @@ services:
   - type: web
     name: lead-verifier-backend
     env: python
-    rootDir: project
+    rootDir: .
     buildCommand: "pip install -r requirements.txt && playwright install --with-deps"
     startCommand: "python app.py"
     envVars:
