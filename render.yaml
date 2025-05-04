@@ -1,10 +1,7 @@
 services:
-  - type: web
-    name: lead-verifier-backend
+  - type: web_service
+    name: ad-verification-tool  # Replace with your desired name
     env: python
-    rootDir: project
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python app.py"
-    envVars:
-      - key: OPENAI_API_KEY
-        sync: false
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    wsgi: true
