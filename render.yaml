@@ -1,7 +1,7 @@
 services:
   - type: web_service
-    name: ad-verification-tool  # Replace with your desired name
+    name: ad-verification-tool
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
+    buildCommand: pip install -r project/requirements.txt
+    startCommand: gunicorn project.app:app
     wsgi: true
